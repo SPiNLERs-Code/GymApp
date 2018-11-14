@@ -105,9 +105,9 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hsd-OO-dZv">
                                 <rect key="frame" x="0.0" y="591" width="414" height="96"/>
-                                <color key="backgroundColor" red="0.64659973790000003" green="1" blue="0.59411006180000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="1" green="0.90890681043491173" blue="0.61051833598232763" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="ivR-eu-Bdu"/>
+                                    <constraint firstAttribute="width" secondItem="hsd-OO-dZv" secondAttribute="height" multiplier="69:16" id="4EY-vx-z5A"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
