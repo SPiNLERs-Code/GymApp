@@ -15,6 +15,7 @@
 		727D9C46219C586100225865 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 727D9C44219C586100225865 /* LaunchScreen.storyboard */; };
 		727D9C4F219C5B1200225865 /* StrenghtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727D9C4E219C5B1200225865 /* StrenghtViewController.swift */; };
 		727D9C51219C5B4500225865 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727D9C50219C5B4500225865 /* StatisticViewController.swift */; };
+		72A87725219ECBBD00C4E9E4 /* BMICalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A87724219ECBBD00C4E9E4 /* BMICalculatorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		727D9C47219C586100225865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		727D9C4E219C5B1200225865 /* StrenghtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrenghtViewController.swift; sourceTree = "<group>"; };
 		727D9C50219C5B4500225865 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		72A87724219ECBBD00C4E9E4 /* BMICalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalculatorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				727D9C3D219C586000225865 /* EnduranceViewController.swift */,
 				727D9C4E219C5B1200225865 /* StrenghtViewController.swift */,
 				727D9C50219C5B4500225865 /* StatisticViewController.swift */,
+				72A87724219ECBBD00C4E9E4 /* BMICalculatorViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				727D9C3E219C586000225865 /* EnduranceViewController.swift in Sources */,
+				72A87725219ECBBD00C4E9E4 /* BMICalculatorViewController.swift in Sources */,
 				727D9C4F219C5B1200225865 /* StrenghtViewController.swift in Sources */,
 				727D9C3A219C586000225865 /* AppDelegate.swift in Sources */,
 				727D9C51219C5B4500225865 /* StatisticViewController.swift in Sources */,
