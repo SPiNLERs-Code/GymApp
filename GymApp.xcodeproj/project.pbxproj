@@ -16,6 +16,7 @@
 		727D9C4F219C5B1200225865 /* StrenghtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727D9C4E219C5B1200225865 /* StrenghtViewController.swift */; };
 		727D9C51219C5B4500225865 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727D9C50219C5B4500225865 /* StatisticViewController.swift */; };
 		72A87725219ECBBD00C4E9E4 /* BMICalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A87724219ECBBD00C4E9E4 /* BMICalculatorViewController.swift */; };
+		72A87729219ED51200C4E9E4 /* BMIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A87728219ED51200C4E9E4 /* BMIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		727D9C4E219C5B1200225865 /* StrenghtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrenghtViewController.swift; sourceTree = "<group>"; };
 		727D9C50219C5B4500225865 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 		72A87724219ECBBD00C4E9E4 /* BMICalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalculatorViewController.swift; sourceTree = "<group>"; };
+		72A87728219ED51200C4E9E4 /* BMIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		727D9C38219C586000225865 /* GymApp */ = {
 			isa = PBXGroup;
 			children = (
+				72A87727219ED4F700C4E9E4 /* Services */,
 				727D9C39219C586000225865 /* AppDelegate.swift */,
 				727D9C4D219C5A2600225865 /* ViewControllers */,
 				727D9C3F219C586000225865 /* Main.storyboard */,
@@ -82,6 +85,14 @@
 				72A87724219ECBBD00C4E9E4 /* BMICalculatorViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		72A87727219ED4F700C4E9E4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				72A87728219ED51200C4E9E4 /* BMIService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 			files = (
 				727D9C3E219C586000225865 /* EnduranceViewController.swift in Sources */,
 				72A87725219ECBBD00C4E9E4 /* BMICalculatorViewController.swift in Sources */,
+				72A87729219ED51200C4E9E4 /* BMIService.swift in Sources */,
 				727D9C4F219C5B1200225865 /* StrenghtViewController.swift in Sources */,
 				727D9C3A219C586000225865 /* AppDelegate.swift in Sources */,
 				727D9C51219C5B4500225865 /* StatisticViewController.swift in Sources */,
