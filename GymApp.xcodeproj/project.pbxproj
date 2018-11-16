@@ -17,7 +17,20 @@
 		727D9C51219C5B4500225865 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727D9C50219C5B4500225865 /* StatisticViewController.swift */; };
 		72A87725219ECBBD00C4E9E4 /* BMICalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A87724219ECBBD00C4E9E4 /* BMICalculatorViewController.swift */; };
 		72A87729219ED51200C4E9E4 /* BMIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A87728219ED51200C4E9E4 /* BMIService.swift */; };
+		72A87731219ED8AB00C4E9E4 /* GymAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A87730219ED8AB00C4E9E4 /* GymAppTests.swift */; };
+		72A8773A219EDA0400C4E9E4 /* BMIServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A87739219EDA0400C4E9E4 /* BMIServiceTest.swift */; };
+		72A8773D219EFD8700C4E9E4 /* ArgumentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8773C219EFD8700C4E9E4 /* ArgumentError.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72A87733219ED8AB00C4E9E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D9C2E219C586000225865 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 727D9C35219C586000225865;
+			remoteInfo = GymApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		727D9C36219C586000225865 /* GymApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,10 +45,22 @@
 		727D9C50219C5B4500225865 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 		72A87724219ECBBD00C4E9E4 /* BMICalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalculatorViewController.swift; sourceTree = "<group>"; };
 		72A87728219ED51200C4E9E4 /* BMIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIService.swift; sourceTree = "<group>"; };
+		72A8772E219ED8AB00C4E9E4 /* GymAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72A87730219ED8AB00C4E9E4 /* GymAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymAppTests.swift; sourceTree = "<group>"; };
+		72A87732219ED8AB00C4E9E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72A87739219EDA0400C4E9E4 /* BMIServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIServiceTest.swift; sourceTree = "<group>"; };
+		72A8773C219EFD8700C4E9E4 /* ArgumentError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		727D9C33219C586000225865 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72A8772B219ED8AB00C4E9E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				727D9C38219C586000225865 /* GymApp */,
+				72A8772F219ED8AB00C4E9E4 /* GymAppTests */,
 				727D9C37219C586000225865 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				727D9C36219C586000225865 /* GymApp.app */,
+				72A8772E219ED8AB00C4E9E4 /* GymAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +91,7 @@
 		727D9C38219C586000225865 /* GymApp */ = {
 			isa = PBXGroup;
 			children = (
+				72A8773B219EFD3400C4E9E4 /* Errors */,
 				72A87727219ED4F700C4E9E4 /* Services */,
 				727D9C39219C586000225865 /* AppDelegate.swift */,
 				727D9C4D219C5A2600225865 /* ViewControllers */,
@@ -95,6 +123,32 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		72A8772F219ED8AB00C4E9E4 /* GymAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				72A87738219ED9BB00C4E9E4 /* Services */,
+				72A87730219ED8AB00C4E9E4 /* GymAppTests.swift */,
+				72A87732219ED8AB00C4E9E4 /* Info.plist */,
+			);
+			path = GymAppTests;
+			sourceTree = "<group>";
+		};
+		72A87738219ED9BB00C4E9E4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				72A87739219EDA0400C4E9E4 /* BMIServiceTest.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		72A8773B219EFD3400C4E9E4 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				72A8773C219EFD8700C4E9E4 /* ArgumentError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,6 +169,24 @@
 			productReference = 727D9C36219C586000225865 /* GymApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		72A8772D219ED8AB00C4E9E4 /* GymAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72A87735219ED8AB00C4E9E4 /* Build configuration list for PBXNativeTarget "GymAppTests" */;
+			buildPhases = (
+				72A8772A219ED8AB00C4E9E4 /* Sources */,
+				72A8772B219ED8AB00C4E9E4 /* Frameworks */,
+				72A8772C219ED8AB00C4E9E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72A87734219ED8AB00C4E9E4 /* PBXTargetDependency */,
+			);
+			name = GymAppTests;
+			productName = GymAppTests;
+			productReference = 72A8772E219ED8AB00C4E9E4 /* GymAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -127,6 +199,10 @@
 				TargetAttributes = {
 					727D9C35219C586000225865 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					72A8772D219ED8AB00C4E9E4 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 727D9C35219C586000225865;
 					};
 				};
 			};
@@ -144,6 +220,7 @@
 			projectRoot = "";
 			targets = (
 				727D9C35219C586000225865 /* GymApp */,
+				72A8772D219ED8AB00C4E9E4 /* GymAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -159,6 +236,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		72A8772C219ED8AB00C4E9E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -169,6 +253,7 @@
 				727D9C3E219C586000225865 /* EnduranceViewController.swift in Sources */,
 				72A87725219ECBBD00C4E9E4 /* BMICalculatorViewController.swift in Sources */,
 				72A87729219ED51200C4E9E4 /* BMIService.swift in Sources */,
+				72A8773D219EFD8700C4E9E4 /* ArgumentError.swift in Sources */,
 				727D9C4F219C5B1200225865 /* StrenghtViewController.swift in Sources */,
 				727D9C3A219C586000225865 /* AppDelegate.swift in Sources */,
 				727D9C51219C5B4500225865 /* StatisticViewController.swift in Sources */,
@@ -176,7 +261,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		72A8772A219ED8AB00C4E9E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72A8773A219EDA0400C4E9E4 /* BMIServiceTest.swift in Sources */,
+				72A87731219ED8AB00C4E9E4 /* GymAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72A87734219ED8AB00C4E9E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 727D9C35219C586000225865 /* GymApp */;
+			targetProxy = 72A87733219ED8AB00C4E9E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		727D9C3F219C586000225865 /* Main.storyboard */ = {
@@ -348,6 +450,44 @@
 			};
 			name = Release;
 		};
+		72A87736219ED8AB00C4E9E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GymAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.bryan-albrecht.GymAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GymApp.app/GymApp";
+			};
+			name = Debug;
+		};
+		72A87737219ED8AB00C4E9E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GymAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.bryan-albrecht.GymAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GymApp.app/GymApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -365,6 +505,15 @@
 			buildConfigurations = (
 				727D9C4B219C586100225865 /* Debug */,
 				727D9C4C219C586100225865 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72A87735219ED8AB00C4E9E4 /* Build configuration list for PBXNativeTarget "GymAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72A87736219ED8AB00C4E9E4 /* Debug */,
+				72A87737219ED8AB00C4E9E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -8,8 +8,15 @@
 
 struct BMIService{
     
-    func calculateBMI(height: Int, weight: Int) -> Double{
+    func calculateBMI(height: Int, weight: Int) throws -> Double{
+        if height == 0{ throw ArgumentError.invalidArgumentError(errorMessage: "The height can not be 0")}
+        if weight == 0{ throw ArgumentError.invalidArgumentError(errorMessage: "The weight can not be 0")}
         
-        return 0.0
+        let heightDouble = Double(height) / 100
+        let weightDouble = Double(weight)
+        
+        let calculated = weightDouble / (heightDouble * heightDouble)
+        
+        return calculated
     }
 }
