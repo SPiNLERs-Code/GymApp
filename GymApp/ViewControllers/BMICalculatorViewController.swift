@@ -19,6 +19,8 @@ class BMICalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "BMI Calculator"
+        
         heightTextBox.keyboardType = UIKeyboardType.numberPad
         weightTextBox.keyboardType = UIKeyboardType.numberPad
         // Do any additional setup after loading the view.

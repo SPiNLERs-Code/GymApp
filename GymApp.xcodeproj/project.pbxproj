@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7269F57A21A2C10F00D04983 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269F57921A2C10F00D04983 /* Result.swift */; };
+		7269F57C21A2C19A00D04983 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269F57B21A2C19A00D04983 /* HTTPError.swift */; };
+		7269F57E21A2C21D00D04983 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269F57D21A2C21D00D04983 /* WebService.swift */; };
+		7269F58021A2C98100D04983 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269F57F21A2C98100D04983 /* ToDoViewController.swift */; };
+		7269F58321A2CB3500D04983 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269F58221A2CB3500D04983 /* ToDo.swift */; };
 		727D9C3A219C586000225865 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727D9C39219C586000225865 /* AppDelegate.swift */; };
 		727D9C3C219C586000225865 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727D9C3B219C586000225865 /* HomeViewController.swift */; };
 		727D9C3E219C586000225865 /* EnduranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727D9C3D219C586000225865 /* EnduranceViewController.swift */; };
@@ -33,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7269F57921A2C10F00D04983 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		7269F57B21A2C19A00D04983 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		7269F57D21A2C21D00D04983 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		7269F57F21A2C98100D04983 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
+		7269F58221A2CB3500D04983 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		727D9C36219C586000225865 /* GymApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		727D9C39219C586000225865 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		727D9C3B219C586000225865 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7269F58121A2CB2100D04983 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7269F58221A2CB3500D04983 /* ToDo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		727D9C2D219C586000225865 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +109,7 @@
 		727D9C38219C586000225865 /* GymApp */ = {
 			isa = PBXGroup;
 			children = (
+				7269F58121A2CB2100D04983 /* Models */,
 				72A8773B219EFD3400C4E9E4 /* Errors */,
 				72A87727219ED4F700C4E9E4 /* Services */,
 				727D9C39219C586000225865 /* AppDelegate.swift */,
@@ -111,6 +130,7 @@
 				727D9C4E219C5B1200225865 /* StrenghtViewController.swift */,
 				727D9C50219C5B4500225865 /* StatisticViewController.swift */,
 				72A87724219ECBBD00C4E9E4 /* BMICalculatorViewController.swift */,
+				7269F57F21A2C98100D04983 /* ToDoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -119,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				72A87728219ED51200C4E9E4 /* BMIService.swift */,
+				7269F57D21A2C21D00D04983 /* WebService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -145,6 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				72A8773C219EFD8700C4E9E4 /* ArgumentError.swift */,
+				7269F57921A2C10F00D04983 /* Result.swift */,
+				7269F57B21A2C19A00D04983 /* HTTPError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -250,13 +273,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7269F57E21A2C21D00D04983 /* WebService.swift in Sources */,
+				7269F57A21A2C10F00D04983 /* Result.swift in Sources */,
 				727D9C3E219C586000225865 /* EnduranceViewController.swift in Sources */,
 				72A87725219ECBBD00C4E9E4 /* BMICalculatorViewController.swift in Sources */,
+				7269F58021A2C98100D04983 /* ToDoViewController.swift in Sources */,
 				72A87729219ED51200C4E9E4 /* BMIService.swift in Sources */,
 				72A8773D219EFD8700C4E9E4 /* ArgumentError.swift in Sources */,
 				727D9C4F219C5B1200225865 /* StrenghtViewController.swift in Sources */,
 				727D9C3A219C586000225865 /* AppDelegate.swift in Sources */,
 				727D9C51219C5B4500225865 /* StatisticViewController.swift in Sources */,
+				7269F57C21A2C19A00D04983 /* HTTPError.swift in Sources */,
+				7269F58321A2CB3500D04983 /* ToDo.swift in Sources */,
 				727D9C3C219C586000225865 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

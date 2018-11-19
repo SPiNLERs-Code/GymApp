@@ -23,14 +23,13 @@ class BMIServiceTest: XCTestCase {
 
     func testBMIClaculationCommonValues(){
         let testHeight = 180;
-        let testWeight = 100;
+        let testWeight = 0;
         let expectedValze = 30.8641975308642;
     
         let bmi =  try? bmiService.calculateBMI(height: testHeight, weight: testWeight)
         
         XCTAssertNotNil(bmi)
         XCTAssertEqual(bmi!,expectedValze,accuracy: 0.00001)
-        
     }
     
     func testBMIClaculationZerroHeight(){

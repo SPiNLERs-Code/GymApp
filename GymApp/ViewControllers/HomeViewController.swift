@@ -10,9 +10,30 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var homeImage: UIImageView!
+    private let webService = WebService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.title = "Home"
+        
+        if let url = URL(string: "https://img.jobs.ch/www/img/organisation/profile_image_27786.jpg") {
+            downloadImage(from: url)
+        }
+    }
+    
+    func downloadImage(from url: URL) {
+        
+        webService.getData(from: url) { data, response, error in
+            guard let data = data, error == nil else {
+            print(error)
+                return
+            }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            DispatchQueue.main.async() {
+                self.homeImage.image = UIImage(data: data)
+            }
+        }
     }
 
 
