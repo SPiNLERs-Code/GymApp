@@ -10,6 +10,7 @@ import UIKit
 
 class ToDoViewController: UIViewController, UITableViewDataSource{
     private var tasks: [ToDo] = []
+    private let webService = WebService()
     
     @IBOutlet weak var taskListTableView: UITableView!
     
@@ -24,27 +25,27 @@ class ToDoViewController: UIViewController, UITableViewDataSource{
         return cell
     }
     
-
-    private let webService = WebService();
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "ToDo"
         
         let jsonURL = "https://jsonplaceholder.typicode.com/todos"
-        let myUrl = URL(string: jsonURL)
-        URLSession.shared.dataTask(with: myUrl!) { (data, response, error) in
+        let myUrl = URL(string: jsonURL)!
+        
+        webService.getData(from: myUrl) { data, response, error in
             guard let mydata = data else { return}
             
             do {
                 let todos = try JSONDecoder().decode([ToDo].self, from: mydata)
                 self.tasks = todos
-                self.taskListTableView.reloadData()
                 
+                DispatchQueue.main.async{
+                    self.taskListTableView.reloadData()
+                }
             }
             catch{
                 
             }
-            }.resume()
+        }
     }
 }

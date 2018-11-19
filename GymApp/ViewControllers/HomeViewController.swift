@@ -25,10 +25,7 @@ class HomeViewController: UIViewController {
     func downloadImage(from url: URL) {
         
         webService.getData(from: url) { data, response, error in
-            guard let data = data, error == nil else {
-            print(error)
-                return
-            }
+            guard let data = data, error == nil else {return}
             print(response?.suggestedFilename ?? url.lastPathComponent)
             DispatchQueue.main.async() {
                 self.homeImage.image = UIImage(data: data)
