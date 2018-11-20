@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7242CBE521A43FCC00E6C33B /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7242CBE421A43FCC00E6C33B /* CameraService.swift */; };
 		7269F57A21A2C10F00D04983 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269F57921A2C10F00D04983 /* Result.swift */; };
 		7269F57C21A2C19A00D04983 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269F57B21A2C19A00D04983 /* HTTPError.swift */; };
 		7269F57E21A2C21D00D04983 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269F57D21A2C21D00D04983 /* WebService.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7242CBE421A43FCC00E6C33B /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
 		7269F57921A2C10F00D04983 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		7269F57B21A2C19A00D04983 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 		7269F57D21A2C21D00D04983 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			children = (
 				72A87728219ED51200C4E9E4 /* BMIService.swift */,
 				7269F57D21A2C21D00D04983 /* WebService.swift */,
+				7242CBE421A43FCC00E6C33B /* CameraService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				72A87725219ECBBD00C4E9E4 /* BMICalculatorViewController.swift in Sources */,
 				7269F58021A2C98100D04983 /* ToDoViewController.swift in Sources */,
 				72A87729219ED51200C4E9E4 /* BMIService.swift in Sources */,
+				7242CBE521A43FCC00E6C33B /* CameraService.swift in Sources */,
 				72A8773D219EFD8700C4E9E4 /* ArgumentError.swift in Sources */,
 				727D9C4F219C5B1200225865 /* StrenghtViewController.swift in Sources */,
 				727D9C3A219C586000225865 /* AppDelegate.swift in Sources */,
