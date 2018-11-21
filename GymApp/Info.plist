@@ -46,6 +46,10 @@
 	<string>GymApp</string>
 	<key>NSCameraUsageDescription</key>
 	<string>GymApp</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>GymApp</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>GymApp</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
