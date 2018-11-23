@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7242CBE721A456D000E6C33B /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7242CBE621A456D000E6C33B /* ImageService.swift */; };
+		7242CBEF21A571DA00E6C33B /* GymAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7242CBEE21A571DA00E6C33B /* GymAppUITests.swift */; };
 		7269F57A21A2C10F00D04983 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269F57921A2C10F00D04983 /* Result.swift */; };
 		7269F57C21A2C19A00D04983 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269F57B21A2C19A00D04983 /* HTTPError.swift */; };
 		7269F57E21A2C21D00D04983 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269F57D21A2C21D00D04983 /* WebService.swift */; };
@@ -29,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7242CBF121A571DA00E6C33B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D9C2E219C586000225865 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 727D9C35219C586000225865;
+			remoteInfo = GymApp;
+		};
 		72A87733219ED8AB00C4E9E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 727D9C2E219C586000225865 /* Project object */;
@@ -40,6 +48,9 @@
 
 /* Begin PBXFileReference section */
 		7242CBE621A456D000E6C33B /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		7242CBEC21A571DA00E6C33B /* GymAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7242CBEE21A571DA00E6C33B /* GymAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymAppUITests.swift; sourceTree = "<group>"; };
+		7242CBF021A571DA00E6C33B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7269F57921A2C10F00D04983 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		7269F57B21A2C19A00D04983 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 		7269F57D21A2C21D00D04983 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
@@ -65,6 +76,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7242CBE921A571DA00E6C33B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		727D9C33219C586000225865 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7242CBED21A571DA00E6C33B /* GymAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7242CBEE21A571DA00E6C33B /* GymAppUITests.swift */,
+				7242CBF021A571DA00E6C33B /* Info.plist */,
+			);
+			path = GymAppUITests;
+			sourceTree = "<group>";
+		};
 		7269F58121A2CB2100D04983 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +122,7 @@
 			children = (
 				727D9C38219C586000225865 /* GymApp */,
 				72A8772F219ED8AB00C4E9E4 /* GymAppTests */,
+				7242CBED21A571DA00E6C33B /* GymAppUITests */,
 				727D9C37219C586000225865 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +132,7 @@
 			children = (
 				727D9C36219C586000225865 /* GymApp.app */,
 				72A8772E219ED8AB00C4E9E4 /* GymAppTests.xctest */,
+				7242CBEC21A571DA00E6C33B /* GymAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,6 +207,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7242CBEB21A571DA00E6C33B /* GymAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7242CBF321A571DA00E6C33B /* Build configuration list for PBXNativeTarget "GymAppUITests" */;
+			buildPhases = (
+				7242CBE821A571DA00E6C33B /* Sources */,
+				7242CBE921A571DA00E6C33B /* Frameworks */,
+				7242CBEA21A571DA00E6C33B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7242CBF221A571DA00E6C33B /* PBXTargetDependency */,
+			);
+			name = GymAppUITests;
+			productName = GymAppUITests;
+			productReference = 7242CBEC21A571DA00E6C33B /* GymAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		727D9C35219C586000225865 /* GymApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 727D9C4A219C586100225865 /* Build configuration list for PBXNativeTarget "GymApp" */;
@@ -223,6 +270,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Bryan Albrecht";
 				TargetAttributes = {
+					7242CBEB21A571DA00E6C33B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 727D9C35219C586000225865;
+					};
 					727D9C35219C586000225865 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -247,11 +298,19 @@
 			targets = (
 				727D9C35219C586000225865 /* GymApp */,
 				72A8772D219ED8AB00C4E9E4 /* GymAppTests */,
+				7242CBEB21A571DA00E6C33B /* GymAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7242CBEA21A571DA00E6C33B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		727D9C34219C586000225865 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,6 +331,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7242CBE821A571DA00E6C33B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7242CBEF21A571DA00E6C33B /* GymAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		727D9C32219C586000225865 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,6 +372,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7242CBF221A571DA00E6C33B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 727D9C35219C586000225865 /* GymApp */;
+			targetProxy = 7242CBF121A571DA00E6C33B /* PBXContainerItemProxy */;
+		};
 		72A87734219ED8AB00C4E9E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 727D9C35219C586000225865 /* GymApp */;
@@ -332,6 +404,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7242CBF421A571DA00E6C33B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EJD373852Y;
+				INFOPLIST_FILE = GymAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.bryan-albrecht.GymAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GymApp;
+			};
+			name = Debug;
+		};
+		7242CBF521A571DA00E6C33B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EJD373852Y;
+				INFOPLIST_FILE = GymAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.bryan-albrecht.GymAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GymApp;
+			};
+			name = Release;
+		};
 		727D9C48219C586100225865 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -525,6 +635,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7242CBF321A571DA00E6C33B /* Build configuration list for PBXNativeTarget "GymAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7242CBF421A571DA00E6C33B /* Debug */,
+				7242CBF521A571DA00E6C33B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		727D9C31219C586000225865 /* Build configuration list for PBXProject "GymApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

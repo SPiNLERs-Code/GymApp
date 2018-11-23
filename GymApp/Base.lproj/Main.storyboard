@@ -178,6 +178,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GdM-gU-vph">
                                         <rect key="frame" x="0.0" y="37.333333333333343" width="335" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="BMI Calculator Height TextBox"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -190,6 +191,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jYN-Ke-NCx">
                                         <rect key="frame" x="0.0" y="121.66666666666666" width="335" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="BMI Calculator Weight TextBox"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -202,12 +204,14 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCX-ju-zMx">
                                         <rect key="frame" x="0.0" y="206" width="335" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="BMI Calculator Result TextBox"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIp-Tr-cIs">
                                         <rect key="frame" x="0.0" y="253" width="335" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="BMI Calculator Calculate Button"/>
                                         <state key="normal" title="Calculate"/>
                                         <connections>
                                             <action selector="calculateButton:" destination="SJh-EH-80O" eventType="touchUpInside" id="MWq-U7-bJU"/>
@@ -266,6 +270,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sm2-qu-AAU">
                                         <rect key="frame" x="142" y="33" width="108" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="BMI Calculator Button"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="BMI Calculator">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

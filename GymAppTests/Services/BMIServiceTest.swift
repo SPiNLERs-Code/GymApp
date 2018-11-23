@@ -21,25 +21,25 @@ class BMIServiceTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testBMIClaculationCommonValues(){
+    func testBMICalculationCommonValues(){
         let testHeight = 180;
-        let testWeight = 0;
-        let expectedValze = 30.8641975308642;
+        let testWeight = 100;
+        let expectedValue = 30.8641975308642;
     
         let bmi =  try? bmiService.calculateBMI(height: testHeight, weight: testWeight)
         
         XCTAssertNotNil(bmi)
-        XCTAssertEqual(bmi!,expectedValze,accuracy: 0.00001)
+        XCTAssertEqual(bmi!,expectedValue,accuracy: 0.00001)
     }
     
-    func testBMIClaculationZerroHeight(){
+    func testBMICalculationZerroHeight(){
         let testHeight = 0;
         let testWeight = 100;
         
         XCTAssertThrowsError(try bmiService.calculateBMI(height: testHeight, weight: testWeight))
     }
     
-    func testBMIClaculationZerroHWeight(){
+    func testBMICalculationZerroHWeight(){
         let testHeight = 180;
         let testWeight = 0;
         
