@@ -1,4 +1,5 @@
 os: osx
 osx_image: xcode10.1
 language: swift
-script: xcodebuild clean build test -project GymApp.xcodeproj -scheme GymApp -destination "platform=iOS Simulator,name=iPhone 8,OS=12.1" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
+
+script - ./scripts/ci-script.bash
