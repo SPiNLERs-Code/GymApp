@@ -20,6 +20,14 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>GymApp</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>GymApp</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>GymApp</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>GymApp</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -42,14 +50,6 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>GymApp</string>
-	<key>NSCameraUsageDescription</key>
-	<string>GymApp</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>GymApp</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>GymApp</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
