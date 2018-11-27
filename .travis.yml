@@ -9,11 +9,11 @@ script:
 - openssl enc -aes-256-cbc -base64 -pass pass:Demo -d -p -in scripts/certs/ProvProfile.mobileprovision.enc  -out scripts/certs/ProvProfile.mobileprovision
 
 # Create custom keychain
-- security create-keychain -p $CUSTOM_KEYCHAIN_PASSWORD ios-build.keychain
+- security create-keychain -p Demo ios-build.keychain
 # Make the ios-build.keychain default, so xcodebuild will use it
 - security default-keychain -s ios-build.keychain
 # Unlock the keychain
-- security unlock-keychain -p $CUSTOM_KEYCHAIN_PASSWORD ios-build.keychain
+- security unlock-keychain -p Demo ios-build.keychain
 # Set keychain timeout to 1 hour for long builds
 # see here
 - security set-keychain-settings -t 3600 -l ~/Library/Keychains/ios-build.keychain
@@ -22,10 +22,10 @@ script:
 
 - security import ./scripts/certs/AppleWWDRCA.cer -k ios-build.keychain -A
 - security import ./scripts/certs/development-cert.cer -k ios-build.keychain -A
-- security import ./scripts/certs/development-key.p12 -k ios-build.keychain -P $SECURITY_PASSWORD -A
+- security import ./scripts/certs/development-key.p12 -k ios-build.keychain -P Demo -A
 
 # Fix for OS X Sierra that hungs in the codesign step
-- security set-key-partition-list -S apple-tool:,apple: -s -k $SECURITY_PASSWORD ios-build.keychain > /dev/null
+- security set-key-partition-list -S apple-tool:,apple: -s -k Demo ios-build.keychain > /dev/null
 
 - mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 - cp "./scripts/certs/ProvProfile.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
