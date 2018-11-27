@@ -2,5 +2,4 @@ os: osx
 osx_image: xcode10.1
 language: swift
 
-script:
-- ./scripts/ci-script.bash
+script: xcodebuild archive -project GymApp.xcodeproj -scheme GymApp -configuration Release -derivedDataPath ./build -archivePath ./build/Products/GymApp.xcarchive
