@@ -4,9 +4,11 @@ language: swift
 
 script: 
 # Development
-- openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/development-cert.cer.enc -d -a -out scripts/certs/development-cert.cer
-- openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/development-key.p12.enc -d -a -out scripts/certs/development-key.p12
-- openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/ProvProfile.mobileprovision.enc -d -a -out scripts/certs/ProvProfile.mobileprovision
+-openssl enc -aes-256-cbc -base64 -pass pass:$SECURITY_PASSWORD -d -p -in scripts/certs/development-cert.cer.enc  -out scripts/certs/development-cert.cer
+
+-openssl enc -aes-256-cbc -base64 -pass pass:$SECURITY_PASSWORD -d -p -in scripts/certs/development-key.p12.enc  -out scripts/certs/development-key.p12
+
+-openssl enc -aes-256-cbc -base64 -pass pass:$SECURITY_PASSWORD -d -p -in scripts/certs/ProvProfile.mobileprovision.enc  -out scripts/certs/ProvProfile.mobileprovision
 
 # Create custom keychain
 - security create-keychain -p $CUSTOM_KEYCHAIN_PASSWORD ios-build.keychain
