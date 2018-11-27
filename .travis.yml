@@ -2,4 +2,6 @@ os: osx
 osx_image: xcode10.1
 language: swift
 
-script: xcodebuild archive -project GymApp.xcodeproj -scheme GymApp -configuration Release -derivedDataPath ./build -archivePath ./build/Products/GymApp.xcarchive
+script: 
+- mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+- xcodebuild archive -project GymApp.xcodeproj -scheme GymApp -configuration Release -derivedDataPath ./build -archivePath ./build/Products/GymApp.xcarchive
