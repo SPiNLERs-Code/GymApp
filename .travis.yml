@@ -20,8 +20,8 @@ script:
 
 
 
-- security import ./scripts/certs/AppleWWDRCA.cer -k ios-project-build.keychain -A
-- security import ./scripts/certs/development-cert.cer -k ios-project-build.keychain -A
+- security import ./scripts/certs/AppleWWDRCA.cer -k ios-project-build.keychain -P Demo -A
+- security import ./scripts/certs/development-cert.cer -k ios-project-build.keychain -P Demo -A
 - security import ./scripts/certs/development-key.p12 -k ios-project-build.keychain -P Demo -A
 
 - mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
@@ -29,5 +29,5 @@ script:
 
 - security unlock-keychain -p Demo ios-project-build.keychain
 
-- sudo xcodebuild archive -project GymApp.xcodeproj -scheme GymApp -configuration Release -derivedDataPath ./build -archivePath ./build/Products/GymApp.xcarchive
+- xcodebuild archive -project GymApp.xcodeproj -scheme GymApp -configuration Release -derivedDataPath ./build -archivePath ./build/Products/GymApp.xcarchive
 - xcodebuild -exportArchive -archivePath ./build/Products/GymApp.xcarchive -exportOptionsPlist ./scripts/exportOptions-Enterprise.plist -exportPath ./build/Products/IPA
