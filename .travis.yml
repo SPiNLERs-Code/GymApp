@@ -29,5 +29,5 @@ script:
 
 - security unlock-keychain -p Demo ios-build.keychain
 
-- xcodebuild archive -project GymApp.xcodeproj -scheme GymApp -configuration Release -derivedDataPath ./build -archivePath ./build/Products/GymApp.xcarchive
+- sudo xcodebuild archive -project GymApp.xcodeproj -scheme GymApp -configuration Release -derivedDataPath ./build -archivePath ./build/Products/GymApp.xcarchive
 - xcodebuild -exportArchive -archivePath ./build/Products/GymApp.xcarchive -exportOptionsPlist ./scripts/exportOptions-Enterprise.plist -exportPath ./build/Products/IPA
