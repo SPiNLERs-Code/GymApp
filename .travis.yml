@@ -29,6 +29,6 @@ script:
 
 - security unlock-keychain -p Demo ios-project-build.keychain
 
-- xcodebuild -workspace GymApp.xcodeproj -scheme GymApp  -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.1' test
+- xcodebuild -project GymApp.xcodeproj -scheme GymApp  -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.1' test
 - xcodebuild archive -project GymApp.xcodeproj -scheme GymApp -configuration Release -derivedDataPath ./build -archivePath ./build/Products/GymApp.xcarchive
 - xcodebuild -exportArchive -archivePath ./build/Products/GymApp.xcarchive -exportOptionsPlist ./scripts/exportOptions-Enterprise.plist -exportPath ./build/Products/IPA
