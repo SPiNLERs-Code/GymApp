@@ -24,9 +24,6 @@ script:
 - security import ./scripts/certs/development-cert.cer -k ios-build.keychain -A
 - security import ./scripts/certs/development-key.p12 -k ios-build.keychain -P Demo -A
 
-# Fix for OS X Sierra that hungs in the codesign step
-- security set-key-partition-list -S apple-tool:,apple: -s -k Demo ios-build.keychain > /dev/null
-
 - mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 - cp "./scripts/certs/ProvProfile.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
 
