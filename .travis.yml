@@ -20,12 +20,15 @@ script:
 
 
 
-- security import ./scripts/certs/AppleWWDRCA.cer -k ios-project-build.keychain -A
-- security import ./scripts/certs/development-cert.cer -k ios-project-build.keychain -A
+- security import ./scripts/certs/AppleWWDRCA.cer -k ios-project-build.keychain -P Demo -A
+- security import ./scripts/certs/development-cert.cer -k ios-project-build.keychain -P Demo -A
 - security import ./scripts/certs/development-key.p12 -k ios-project-build.keychain -P Demo -A
 
 - mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 - cp "./scripts/certs/ProvProfile.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
 
+- security unlock-keychain -p Demo ios-project-build.keychain
+
+- xcodebuild -project GymApp.xcodeproj -scheme GymApp  -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=12.1' test
 - xcodebuild archive -project GymApp.xcodeproj -scheme GymApp -configuration Release -derivedDataPath ./build -archivePath ./build/Products/GymApp.xcarchive
 - xcodebuild -exportArchive -archivePath ./build/Products/GymApp.xcarchive -exportOptionsPlist ./scripts/exportOptions-Enterprise.plist -exportPath ./build/Products/IPA
