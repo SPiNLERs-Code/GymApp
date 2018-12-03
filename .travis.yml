@@ -3,29 +3,47 @@ osx_image: xcode10.1
 language: swift
 
 script: 
+
+# openssl des -pass pass:Demo  -in develop.cer -out enc/develop.cer.enc
+# openssl des -pass pass:Demo  -in develop.p12 -out enc/develop.p12.enc
+# openssl des -pass pass:Demo  -in develop.mobileprovision -out enc/develop.mobileprovision.enc
+
+# openssl des -pass pass:Demo  -in distribution.cer -out enc/distribution.cer.enc
+# openssl des -pass pass:Demo  -in distribution.p12 -out enc/distribution.p12.enc
+# openssl des -pass pass:Demo  -in distribution.mobileprovision -out enc/distribution.mobileprovision.enc
+
 # Development
-- openssl enc -aes-256-cbc -base64 -pass pass:Demo -d -p -in scripts/certs/development-cert.cer.enc  -out scripts/certs/development-cert.cer
-- openssl enc -aes-256-cbc -base64 -pass pass:Demo -d -p -in scripts/certs/development-key.p12.enc  -out scripts/certs/development-key.p12
-- openssl enc -aes-256-cbc -base64 -pass pass:Demo -d -p -in scripts/certs/ProvProfile.mobileprovision.enc  -out scripts/certs/ProvProfile.mobileprovision
+- openssl des -d -pass pass:Demo  -in scripts/certs/develop.cer.enc -out scripts/certs/develop.cer
+- openssl des -d -pass pass:Demo  -in scripts/certs/develop.p12.enc -out scripts/certs/develop.p12
+- openssl des -d -pass pass:Demo  -in scripts/certs/develop.mobileprovision.enc -out scripts/certs/develop.mobileprovision
+
+# Distribution
+
+- openssl des -d -pass pass:Demo  -in scripts/certs/distribution.cer.enc -out scripts/certs/distribution.cer
+- openssl des -d -pass pass:Demo  -in scripts/certs/distribution.p12.enc -out scripts/certs/distribution.p12
+- openssl des -d -pass pass:Demo  -in scripts/certs/distribution.mobileprovision.enc -out scripts/certs/distribution.mobileprovision
 
 # Create custom keychain
 - security create-keychain -p Demo ios-project-build.keychain
+
 # Make the ios-build.keychain default, so xcodebuild will use it
 - security default-keychain -s ios-project-build.keychain
+
 # Unlock the keychain
 - security unlock-keychain -p Demo ios-project-build.keychain
 # Set keychain timeout to 1 hour for long builds
-# see here
 - security set-keychain-settings -t 3600 -l ~/Library/Keychains/ios-project-build.keychain
 
 
-
-- security import ./scripts/certs/AppleWWDRCA.cer -k ios-project-build.keychain -P Demo -A
-- security import ./scripts/certs/development-cert.cer -k ios-project-build.keychain -P Demo -A
-- security import ./scripts/certs/development-key.p12 -k ios-project-build.keychain -P Demo -A
+- security import ./scripts/certs/AppleWWDRCA.cer -k ios-project-build.keychain -A
+- security import ./scripts/certs/develop.cer -k ios-project-build.keychain -P -A
+- security import ./scripts/certs/develop.p12 -k ios-project-build.keychain -P Demo -A
+- security import ./scripts/certs/distribution.cer -k ios-project-build.keychain -P -A
+- security import ./scripts/certs/distribution.p12 -k ios-project-build.keychain -P Demo -A
 
 - mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-- cp "./scripts/certs/ProvProfile.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
+- cp "./scripts/certs/develop.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
+- cp "./scripts/certs/distribution.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
 
 - security unlock-keychain -p Demo ios-project-build.keychain
 
